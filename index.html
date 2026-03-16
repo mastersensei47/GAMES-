@@ -89,11 +89,20 @@ main{
 }
 
 /* capa oscura para que se vean bien los videos */
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.6);
+.hero{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+
+  background-image:url("fondo.jpg");
+  background-size:cover;
+  background-position:center;
+
+  min-height:500px; /* altura grande */
+  padding:120px 60px;
   border-radius:12px;
 }
 
