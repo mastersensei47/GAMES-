@@ -69,7 +69,7 @@ main{
   margin-right:auto;
 }
 
-/* ===== HERO AJUSTADO ===== */
+/* ===== HERO (BANNER) ===== */
 .hero{
   position:relative;
   display:flex;
@@ -77,20 +77,13 @@ main{
   justify-content:space-between;
   gap:20px;
   flex-wrap:wrap;
-  
-  /* Ajuste de imagen para que no se corte */
   background-image:url("fondo.jpg");
-  background-size: 100% 100%; /* La imagen se estira para cubrir todo sin cortarse */
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  
-  min-height: 450px; /* Reducido un poco para que la imagen no se estire tanto hacia abajo */
+  min-height: 450px;
   padding: 40px 30px;
   border-radius:12px;
-}
-
-.hero > *{
-  position:relative;
 }
 
 .video{
@@ -100,7 +93,7 @@ main{
 
 .video iframe{
   width:100%;
-  height:250px; /* Reducido un poco para que quepa mejor en el fondo */
+  height:250px;
   border-radius:12px;
   box-shadow:0 0 25px black;
 }
@@ -162,7 +155,7 @@ main{
   background:#ff0000;
 }
 
-/* ===== INFO ===== */
+/* ===== INFO JUEGO ===== */
 .info-juego{
   margin-top:60px;
   max-width:900px;
@@ -182,35 +175,11 @@ main{
 .nota{
   text-align:center;
   font-size:16px;
-  border:none;
   margin-bottom:40px;
   color:#bbb;
 }
 
-.requisitos, .info-list{
-  list-style:none;
-  padding:0;
-}
-
-.requisitos li, .info-list li{
-  margin-bottom:12px;
-  font-size:15px;
-}
-
-.check{
-  color:#4caf50;
-  margin-right:8px;
-  font-weight:bold;
-}
-
-hr{
-  border:none;
-  height:1px;
-  background:#222;
-  margin:40px 0;
-}
-
-/* ===== ACORDEON PRO ===== */
+/* ===== ACORDEONES ===== */
 .acordeon{
   background:#111;
   border-radius:10px;
@@ -236,37 +205,41 @@ hr{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  transition:0.3s;
 }
 
-.acordeon-header:hover{
-  background:#222;
-  box-shadow:inset 0 0 10px rgba(255,0,0,0.4);
-}
-
-.flecha{
-  transition:0.4s;
-  font-size:18px;
-}
-
-.acordeon.activo .flecha{
-  transform:rotate(180deg);
-  color:red;
-}
+.flecha{ transition:0.4s; }
+.acordeon.activo .flecha{ transform:rotate(180deg); color:red; }
 
 .acordeon-content{
   max-height:0;
   overflow:hidden;
-  transition:max-height 0.5s ease, padding 0.3s ease;
+  transition:max-height 0.5s ease;
   background:#0f0f0f;
-  padding:0 20px;
 }
 
-.video-github{
-  width: 100%;
+/* Botón TeraBox */
+.btn-terabox {
+  display: inline-block;
+  background: #0081ff;
+  color: white;
+  padding: 15px 30px;
   border-radius: 8px;
-  margin: 15px 0;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px 0;
+  transition: 0.3s;
 }
+
+.btn-terabox:hover {
+  background: #005fbc;
+  transform: scale(1.05);
+}
+
+/* ===== REQUISITOS E INFO ===== */
+.requisitos, .info-list{ list-style:none; padding:0; }
+.requisitos li, .info-list li{ margin-bottom:12px; font-size:15px; }
+.check{ color:#4caf50; margin-right:8px; font-weight:bold; }
+hr{ border:none; height:1px; background:#222; margin:40px 0; }
 
 /* ===== GALERÍA ===== */
 .galeria{
@@ -279,17 +252,12 @@ hr{
 .galeria img{
   width:100%;
   border-radius:10px;
-  cursor:pointer;
   transition:0.3s;
-}
-
-.galeria img:hover{
-  transform:scale(1.05);
 }
 
 @media(max-width:900px){
   .hero{ flex-direction:column; padding: 20px; background-size: cover; }
-  main{ margin-top: 52px; padding: 10px; }
+  main{ margin-top: 52px; }
 }
 </style>
 </head>
@@ -312,19 +280,13 @@ hr{
 <main>
 
 <section class="hero">
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/K8EKDkUtxJc" allowfullscreen></iframe>
-  </div>
+  <div class="video"><iframe src="https://www.youtube.com/embed/K8EKDkUtxJc" allowfullscreen></iframe></div>
   <div class="titulo">
-    <div class="video-centro">
-      <iframe src="https://www.youtube.com/embed/yc_narOXOOY" allowfullscreen></iframe>
-    </div>
+    <div class="video-centro"><iframe src="https://www.youtube.com/embed/yc_narOXOOY" allowfullscreen></iframe></div>
     <h1>MORTAL KOMBAT 11</h1>
     <p>↤ más juegos ➟</p>
   </div>
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/wmozuemP_-I" allowfullscreen></iframe>
-  </div>
+  <div class="video"><iframe src="https://www.youtube.com/embed/wmozuemP_-I" allowfullscreen></iframe></div>
 </section>
 
 <section class="partes">
@@ -357,33 +319,29 @@ hr{
     TRAILER DEL JUEGO
     <div class="flecha">▼</div>
   </div>
-
-  <div class="acordeon-content">
-    <video controls class="video-github">
-      <source src="https://mastersensei47.github.io/videos/video.mp4" type="video/mp4">
-    </video>
+  <div class="acordeon-content" style="text-align: center;">
+    <p style="margin-top:20px; color:#aaa;">Haz clic abajo para ver el trailer en alta calidad</p>
+    <a href="https://1024terabox.com/s/11v612m75gCTALGmguF_jEw" target="_blank" class="btn-terabox">🚀 VER EN TERABOX</a>
   </div>
 </div>
 
 <h2>REQUISITOS DEL SISTEMA</h2>
-
 <ul class="requisitos">
-<li><span class="check">✔</span> <strong>Sistema operativo:</strong> windwos7/Windows 10</li>
-<li><span class="check">✔</span> <strong>Procesador:</strong> Intel Core i5-750, 2,66 GHz / AMD Phenom II X4 965, 3,4 GHz o AMD Ryzen™ 3 1200, 3,1 GHz</li>
+<li><span class="check">✔</span> <strong>Sistema operativo:</strong> Windows 7 / 10</li>
+<li><span class="check">✔</span> <strong>Procesador:</strong> Intel Core i5-750 / AMD Ryzen™ 3 1200</li>
 <li><span class="check">✔</span> <strong>Memoria:</strong> 8 GB de RAM</li>
-<li><span class="check">✔</span> <strong>Gráficos:</strong> NVIDIA® GeForce™ GTX 670 o NVIDIA® GeForce™ GTX 1050 / AMD® Radeon™ HD 7950</li>
-<li><span class="check">✔</span> <strong>DirectX:</strong> Versión 11</li>
+<li><span class="check">✔</span> <strong>Gráficos:</strong> GTX 670 o 1050 / Radeon™ HD 7950</li>
 <li><span class="check">✔</span> <strong>Almacenamiento:</strong> 281 GB temporales - 140 GB final</li>
 </ul>
 
 <hr>
-<h2>INFORMACIÓN DEL JUEGO</h2>
 
+<h2>INFORMACIÓN DEL JUEGO</h2>
 <ul class="info-list">
 <li><strong>Género:</strong> Acción</li>
 <li><strong>Plataforma:</strong> PC</li>
 <li><strong>Versión:</strong> v0.384-34-CL237394</li>
-<li><strong>Edición:</strong> BUILD 8418155 + todos los complementos</li>
+<li><strong>Edición:</strong> Ultimate + All DLCs</li>
 </ul>
 
 <div class="acordeon">
@@ -392,10 +350,10 @@ hr{
     <div class="flecha">▼</div>
   </div>
   <div class="acordeon-content">
-    <ul style="list-style: none; padding: 20px 0;">
-      <li style="color: #ccc;">Mortal Kombat 11 (Juego Base)</li>
-      <li style="color: #ccc;">Kombat Pack 1 & 2</li>
-      <li style="color: #ccc;">Aftermath Expansion</li>
+    <ul style="padding: 20px; color:#ccc;">
+      <li>Mortal Kombat 11 (Juego Base)</li>
+      <li>Kombat Pack 1 & 2</li>
+      <li>Aftermath Expansion</li>
     </ul>
   </div>
 </div>
