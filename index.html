@@ -62,8 +62,8 @@ body{
 
 /* ===== CONTENIDO ===== */
 main{
-  margin-top:70px; /* MODIFICADO: Se redujo el margen superior para quitar el espacio negro de arriba */
-  padding:40px 20px;
+  margin-top:55px; /* AJUSTADO para eliminar el espacio negro superior */
+  padding:20px;
   max-width:1300px;
   margin-left:auto;
   margin-right:auto;
@@ -81,7 +81,7 @@ main{
   background-size:cover;
   background-position:center;
   min-height:500px;
-  padding:120px 60px;
+  padding:60px; /* Reducido el padding para que el contenido suba */
   border-radius:12px;
 }
 
@@ -281,7 +281,8 @@ hr{
 }
 
 @media(max-width:900px){
-  .hero{ flex-direction:column; }
+  .hero{ flex-direction:column; padding: 40px 20px; }
+  main{ margin-top: 60px; }
 }
 </style>
 </head>
