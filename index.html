@@ -69,7 +69,7 @@ main{
   margin-right:auto;
 }
 
-/* ===== HERO (BANNER AJUSTADO) ===== */
+/* ===== HERO (BANNER) ===== */
 .hero{
   position:relative;
   display:flex;
@@ -78,7 +78,7 @@ main{
   gap:20px;
   flex-wrap:wrap;
   background-image:url("fondo.jpg");
-  background-size: 100% 100%; /* Ajusta la imagen al cuadro sin cortarla */
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 450px;
@@ -96,6 +96,7 @@ main{
   height:250px;
   border-radius:12px;
   box-shadow:0 0 25px black;
+  border: none;
 }
 
 .titulo{
@@ -116,6 +117,7 @@ main{
   height:220px;
   border-radius:14px;
   box-shadow:0 0 25px rgba(255,0,0,0.4);
+  border: none;
 }
 
 .titulo h1{
@@ -130,7 +132,7 @@ main{
   text-shadow: 1px 1px 3px black;
 }
 
-/* ===== PARTES ===== */
+/* ===== PARTES DE DESCARGA ===== */
 .partes{
   margin-top:30px;
   text-align:center;
@@ -187,7 +189,7 @@ main{
   border:1px solid #222;
   overflow:hidden;
   transition:0.3s;
-  max-width:800px;
+  max-width:850px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -215,12 +217,6 @@ main{
   overflow:hidden;
   transition:max-height 0.5s ease;
   background:#0f0f0f;
-}
-
-.video-drive {
-  width: 100%;
-  border-radius: 8px;
-  margin: 15px 0;
 }
 
 /* ===== REQUISITOS E INFO ===== */
@@ -307,11 +303,14 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
     TRAILER DEL JUEGO
     <div class="flecha">▼</div>
   </div>
-  <div class="acordeon-content" style="text-align: center; padding: 0 20px;">
-    <video controls class="video-drive">
-      <source src="https://drive.google.com/uc?export=download&id=1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh" type="video/mp4">
-      Tu navegador no soporta el video.
-    </video>
+  <div class="acordeon-content" style="text-align: center; padding: 10px;">
+    <iframe 
+      src="https://drive.google.com/file/d/1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh/preview" 
+      width="100%" 
+      height="450" 
+      style="border-radius: 8px; border: none; box-shadow: 0 0 15px rgba(0,0,0,0.5);" 
+      allow="autoplay">
+    </iframe>
   </div>
 </div>
 
@@ -340,10 +339,10 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
     <div class="flecha">▼</div>
   </div>
   <div class="acordeon-content">
-    <ul style="padding: 20px; color:#ccc;">
-      <li>Mortal Kombat 11 (Juego Base)</li>
-      <li>Kombat Pack 1 & 2</li>
-      <li>Aftermath Expansion</li>
+    <ul style="padding: 20px; color:#ccc; list-style: none;">
+      <li>• Mortal Kombat 11 (Juego Base)</li>
+      <li>• Kombat Pack 1 & 2</li>
+      <li>• Aftermath Expansion</li>
     </ul>
   </div>
 </div>
