@@ -71,11 +71,34 @@ main{
 
 /* ===== HERO ===== */
 .hero{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:30px;
   flex-wrap:wrap;
+
+  /* IMAGEN DE FONDO */
+  background-image:url("fondo-mk11.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  padding:40px;
+  border-radius:12px;
+}
+
+/* capa oscura para que se vean bien los videos */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  border-radius:12px;
+}
+
+.hero > *{
+  position:relative;
 }
 
 .video{
