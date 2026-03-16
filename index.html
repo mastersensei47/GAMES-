@@ -18,51 +18,74 @@ body{
   color:white;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR MEJORADA ===== */
 .navbar{
   width:100%;
-  background:#111;
+  background: rgba(17, 17, 17, 0.95);
   position:fixed;
   top:0;
   left:0;
   z-index:1000;
-  box-shadow:0 2px 15px black;
+  box-shadow:0 2px 20px black;
+  border-bottom: 1px solid #333;
 }
 
 .nav-container{
-  max-width:1200px;
+  max-width:1400px;
   margin:auto;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 20px;
+  padding:12px 20px;
 }
 
 .logo{
-  font-size:22px;
+  font-size:24px;
   font-weight:bold;
-  text-shadow:0 0 10px red;
+  color: #fff;
+  text-shadow: 0 0 10px #ff0000;
+  text-decoration: none;
 }
 
 .nav-links{
   display:flex;
-  gap:20px;
+  gap:15px;
+  align-items: center;
 }
 
 .nav-links a{
-  color:white;
+  color:#ccc;
   text-decoration:none;
   font-weight:bold;
+  font-size: 14px;
   transition:0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
-.nav-links a:hover{
-  color:#ff0000;
+/* Efectos individuales para Redes */
+.link-youtube:hover { color: #ff0000; background: rgba(255,0,0,0.1); }
+.link-instagram:hover { color: #e1306c; background: rgba(225,48,108,0.1); }
+.link-tiktok:hover { color: #00f2ea; background: rgba(0,242,234,0.1); }
+
+/* Botón Especial JUGAR ONLINE */
+.btn-jugar {
+  border: 1px solid #00ff00;
+  color: #00ff00 !important;
+  box-shadow: 0 0 5px rgba(0,255,0,0.2);
+}
+.btn-jugar:hover {
+  background: #00ff00;
+  color: black !important;
+  box-shadow: 0 0 15px #00ff00;
 }
 
 /* ===== CONTENIDO ===== */
 main{
-  margin-top:52px; 
+  margin-top:70px; 
   padding:10px 20px 40px 20px; 
   max-width:1300px;
   margin-left:auto;
@@ -86,62 +109,19 @@ main{
   border-radius:12px;
 }
 
-.video{
-  flex:1;
-  min-width:280px;
-}
+.video{ flex:1; min-width:280px; }
+.video iframe{ width:100%; height:250px; border-radius:12px; box-shadow:0 0 25px black; border:none; }
 
-.video iframe{
-  width:100%;
-  height:250px;
-  border-radius:12px;
-  box-shadow:0 0 25px black;
-  border: none;
-}
+.titulo{ flex:1; text-align:center; min-width:250px; }
+.titulo h1{ font-size:28px; margin-top: 25px; margin-bottom:5px; text-shadow: 2px 2px 4px black; }
+.titulo p{ color:#eee; font-weight: bold; text-shadow: 1px 1px 3px black; }
 
-.titulo{
-  flex:1;
-  text-align:center;
-  min-width:250px;
-}
-
-.video-centro{
-  margin-bottom:15px;
-  display:flex;
-  justify-content:center;
-}
-
-.video-centro iframe{
-  width:100%;
-  max-width:400px;
-  height:220px;
-  border-radius:14px;
-  box-shadow:0 0 25px rgba(255,0,0,0.4);
-  border: none;
-}
-
-.titulo h1{
-  font-size:28px;
-  margin-bottom:5px;
-  text-shadow: 2px 2px 4px black;
-}
-
-.titulo p{
-  color:#eee;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px black;
-}
+.video-centro{ margin-bottom:15px; display:flex; justify-content:center; }
+.video-centro iframe{ width:100%; max-width:400px; height:220px; border-radius:14px; box-shadow:0 0 25px rgba(255,0,0,0.4); border:none; }
 
 /* ===== PARTES DE DESCARGA ===== */
-.partes{
-  margin-top:30px;
-  text-align:center;
-}
-
-.partes h2{
-  margin-bottom:15px;
-}
-
+.partes{ margin-top:30px; text-align:center; }
+.partes h2{ margin-bottom:15px; }
 .partes a{
   display:inline-block;
   margin:6px;
@@ -152,36 +132,12 @@ main{
   color:white;
   transition:0.3s;
 }
+.partes a:hover{ background:#ff0000; }
 
-.partes a:hover{
-  background:#ff0000;
-}
+/* ===== INFO JUEGO Y ACORDEONES ===== */
+.info-juego{ margin: 60px auto 0 auto; max-width:900px; text-align:left; line-height:1.7; }
+.info-juego h2{ font-size:26px; margin-bottom:20px; border-bottom:2px solid #222; padding-bottom:8px; }
 
-/* ===== INFO JUEGO ===== */
-.info-juego{
-  margin-top:60px;
-  max-width:900px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:left;
-  line-height:1.7;
-}
-
-.info-juego h2{
-  font-size:26px;
-  margin-bottom:20px;
-  border-bottom:2px solid #222;
-  padding-bottom:8px;
-}
-
-.nota{
-  text-align:center;
-  font-size:16px;
-  margin-bottom:40px;
-  color:#bbb;
-}
-
-/* ===== ACORDEONES ===== */
 .acordeon{
   background:#111;
   border-radius:10px;
@@ -190,58 +146,26 @@ main{
   overflow:hidden;
   transition:0.3s;
   max-width:850px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 20px auto;
 }
-
-.acordeon.activo{
-  box-shadow:0 0 20px rgba(255,0,0,0.6);
-  border:1px solid red;
-}
-
-.acordeon-header{
-  padding:18px;
-  cursor:pointer;
-  font-weight:bold;
-  background:#1b1b1b;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
+.acordeon.activo{ box-shadow:0 0 20px rgba(255,0,0,0.6); border:1px solid red; }
+.acordeon-header{ padding:18px; cursor:pointer; font-weight:bold; background:#1b1b1b; display:flex; justify-content:space-between; align-items:center; }
 .flecha{ transition:0.4s; }
 .acordeon.activo .flecha{ transform:rotate(180deg); color:red; }
+.acordeon-content{ max-height:0; overflow:hidden; transition:max-height 0.5s ease; background:#0f0f0f; }
 
-.acordeon-content{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.5s ease;
-  background:#0f0f0f;
-}
-
-/* ===== REQUISITOS E INFO ===== */
-.requisitos, .info-list{ list-style:none; padding:0; }
-.requisitos li, .info-list li{ margin-bottom:12px; font-size:15px; }
+/* ===== REQUISITOS ===== */
+.requisitos{ list-style:none; padding:0; }
+.requisitos li{ margin-bottom:12px; font-size:15px; }
 .check{ color:#4caf50; margin-right:8px; font-weight:bold; }
-hr{ border:none; height:1px; background:#222; margin:40px 0; }
 
 /* ===== GALERÍA ===== */
-.galeria{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:15px;
-}
+.galeria{ margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:15px; }
+.galeria img{ width:100%; border-radius:10px; transition:0.3s; }
 
-.galeria img{
-  width:100%;
-  border-radius:10px;
-  transition:0.3s;
-}
-
-@media(max-width:900px){
+@media(max-width:1000px){
+  .nav-links span { display: none; } /* En móvil oculta el texto, deja solo iconos */
   .hero{ flex-direction:column; padding: 20px; background-size: cover; }
-  main{ margin-top: 52px; }
 }
 </style>
 </head>
@@ -250,13 +174,17 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
 
 <nav class="navbar">
   <div class="nav-container">
-    <div class="logo">MS47</div>
+    <a href="index.html" class="logo">MS47</a>
+    
     <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="categorias.html">Categorías</a>
-      <a href="https://www.youtube.com/@mastersensei-47/videos" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/master__sensei47" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@mastersensei47" target="_blank">TikTok</a>
+      <a href="index.html">🏠 <span>Inicio</span></a>
+      <a href="categorias.html">📂 <span>Categorías</span></a>
+      
+      <a href="https://gam.onl/" target="_blank" class="btn-jugar">🕹️ <span>Jugar Online</span></a>
+      
+      <a href="https://www.youtube.com/@mastersensei-47/videos" target="_blank" class="link-youtube">🎬 <span>YouTube</span></a>
+      <a href="https://www.instagram.com/master__sensei47" target="_blank" class="link-instagram">📸 <span>Instagram</span></a>
+      <a href="https://www.tiktok.com/@mastersensei47" target="_blank" class="link-tiktok">📱 <span>TikTok</span></a>
     </div>
   </div>
 </nav>
@@ -275,32 +203,18 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
 
 <section class="partes">
   <h2>PESO TOTAL 131 GB (COMPRIMIDO)</h2>
-  <a href="https://www.mediafire.com/file/paquzegbhzvu4cp/Mortal+Kombat+11.7z.001/file">Parte 1</a>
-  <a href="https://www.mediafire.com/file/rvjdhabrsfolq1x/Mortal+Kombat+11.7z.002/file">Parte 2</a>
-  <a href="https://www.mediafire.com/file/408hw9qq4kp2w8z/Mortal+Kombat+11.7z.003/file">Parte 3</a>
-  <a href="https://www.mediafire.com/file/izs7cvdp1g0nhr6/Mortal_Kombat_11.7z.004/file">Parte 4</a>
-  <a href="https://www.mediafire.com/file/peu57q51lm7ow0w/Mortal+Kombat+11.7z.005/file">Parte 5</a>
-  <a href="https://www.mediafire.com/file/7syohe4en404dkj/Mortal+Kombat+11.7z.006/file">Parte 6</a>
-  <a href="https://www.mediafire.com/file/ja5z9dbeh1ny7pc/Mortal+Kombat+11.7z.007/file">Parte 7</a>
-  <a href="https://www.mediafire.com/file/s64o3jvekkl1mjr/Mortal+Kombat+11.7z.008/file">Parte 8</a>
-  <a href="https://www.mediafire.com/file/9xxxog5xmwlrhp3/Mortal+Kombat+11.7z.009/file">Parte 9</a>
-  <a href="https://www.mediafire.com/file/bsycftwc7jfdbpz/Mortal+Kombat+11.7z.010/file">Parte 10</a>
-  <a href="https://www.mediafire.com/file/ph4vpun5i6ttjqy/Mortal+Kombat+11.7z.011/file">Parte 11</a>
-  <a href="https://www.mediafire.com/file/jimyyoxby28nq5x/Mortal+Kombat+11.7z.012/file">Parte 12</a>
-  <a href="https://www.mediafire.com/file/2pvxbxfngypn3ud/Mortal+Kombat+11.7z.013/file">Parte 13</a>
-  <a href="https://www.mediafire.com/file/n0jxp00fp0zkiiv/Mortal+Kombat+11.7z.014/file">Parte 14</a>
-  <a href="https://www.mediafire.com/file/3z65uio54acqnjp/Mortal+Kombat+11.7z.015/file">Parte 15</a>
-  <a href="https://www.mediafire.com/file/s5cipjhxg6q764t/Mortal+Kombat+11.7z.016/file">Parte 16</a>
-  <a href="https://www.mediafire.com/file/psp4xstlqw8lk5r/Mortal+Kombat+11.7z.017/file">Parte 17</a>
-</section>
+  <a href="PARTE_1_LINK">Parte 1</a>
+  <a href="PARTE_2_LINK">Parte 2</a>
+  <a href="PARTE_3_LINK">Parte 3</a>
+  </section>
 
 <section class="info-juego">
 
-<h2 class="nota">(Extrae solo la primera parte)</h2>
+<h2 style="text-align: center; color: #bbb; border:none;">(Extrae solo la primera parte)</h2>
 
 <div class="acordeon">
   <div class="acordeon-header" onclick="toggleAcordeon(this)">
-    TRAILER DEL JUEGO
+    🎞️ TRAILER DEL JUEGO
     <div class="flecha">▼</div>
   </div>
   <div class="acordeon-content" style="text-align: center; padding: 10px;">
@@ -308,7 +222,7 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
       src="https://drive.google.com/file/d/1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh/preview" 
       width="100%" 
       height="450" 
-      style="border-radius: 8px; border: none; box-shadow: 0 0 15px rgba(0,0,0,0.5);" 
+      style="border-radius: 8px; border: none;" 
       allow="autoplay">
     </iframe>
   </div>
@@ -316,36 +230,12 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
 
 <h2>REQUISITOS DEL SISTEMA</h2>
 <ul class="requisitos">
-<li><span class="check">✔</span> <strong>Sistema operativo:</strong> Windows 7 / 10</li>
-<li><span class="check">✔</span> <strong>Procesador:</strong> Intel Core i5-750 / AMD Ryzen™ 3 1200</li>
-<li><span class="check">✔</span> <strong>Memoria:</strong> 8 GB de RAM</li>
-<li><span class="check">✔</span> <strong>Gráficos:</strong> GTX 670 o 1050 / Radeon™ HD 7950</li>
-<li><span class="check">✔</span> <strong>Almacenamiento:</strong> 281 GB temporales - 140 GB final</li>
+  <li><span class="check">✔</span> <strong>Sistema operativo:</strong> Windows 7 / 10</li>
+  <li><span class="check">✔</span> <strong>Procesador:</strong> Intel Core i5-750 / AMD Ryzen™ 3 1200</li>
+  <li><span class="check">✔</span> <strong>Memoria:</strong> 8 GB de RAM</li>
+  <li><span class="check">✔</span> <strong>Gráficos:</strong> GTX 670 o 1050 / Radeon™ HD 7950</li>
+  <li><span class="check">✔</span> <strong>Almacenamiento:</strong> 140 GB final</li>
 </ul>
-
-<hr>
-
-<h2>INFORMACIÓN DEL JUEGO</h2>
-<ul class="info-list">
-<li><strong>Género:</strong> Acción</li>
-<li><strong>Plataforma:</strong> PC</li>
-<li><strong>Versión:</strong> v0.384-34-CL237394</li>
-<li><strong>Edición:</strong> Ultimate + All DLCs</li>
-</ul>
-
-<div class="acordeon">
-  <div class="acordeon-header" onclick="toggleAcordeon(this)">
-    CONTENIDO / DLCs
-    <div class="flecha">▼</div>
-  </div>
-  <div class="acordeon-content">
-    <ul style="padding: 20px; color:#ccc; list-style: none;">
-      <li>• Mortal Kombat 11 (Juego Base)</li>
-      <li>• Kombat Pack 1 & 2</li>
-      <li>• Aftermath Expansion</li>
-    </ul>
-  </div>
-</div>
 
 </section>
 
