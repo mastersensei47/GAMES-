@@ -77,31 +77,10 @@ main{
   justify-content:space-between;
   gap:30px;
   flex-wrap:wrap;
-
-  /* IMAGEN DE FONDO */
   background-image:url("fondo.jpg");
   background-size:cover;
   background-position:center;
-  background-repeat:no-repeat;
-
-  padding:40px;
-  border-radius:12px;
-}
-
-/* capa oscura para que se vean bien los videos */
-.hero{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
-
-  background-image:url("fondo.jpg");
-  background-size:cover;
-  background-position:center;
-
-  min-height:500px; /* altura grande */
+  min-height:500px;
   padding:120px 60px;
   border-radius:12px;
 }
@@ -224,143 +203,7 @@ hr{
   margin:40px 0;
 }
 
-/* ===== GALERÍA ===== */
-.galeria{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:15px;
-}
-
-.galeria img{
-  width:100%;
-  border-radius:10px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.galeria img:hover{
-  transform:scale(1.05);
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .hero{
-    flex-direction:column;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">MS47</div>
-    <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="categorias.html">Categorías</a>
-      <a href="https://www.youtube.com/@mastersensei-47/videos" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/master__sensei47" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@mastersensei47" target="_blank">TikTok</a>
-    </div>
-  </div>
-</nav>
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-
-  <!-- VIDEO IZQUIERDO -->
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/K8EKDkUtxJc" allowfullscreen></iframe>
-  </div>
-
-  <!-- CENTRO -->
-  <div class="titulo">
-
-    <!-- VIDEO NUEVO ARRIBA DEL TITULO -->
-    <div class="video-centro">
-      <iframe src="https://www.youtube.com/embed/yc_narOXOOY" allowfullscreen></iframe>
-    </div>
-
-    <h1>MORTAL KOMBAT 11</h1>
-    <p>↤ más juegos ➟</p>
-
-  </div>
-
-  <!-- VIDEO DERECHO -->
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/wmozuemP_-I" allowfullscreen></iframe>
-  </div>
-
-</section>
-
-<!-- PARTES -->
-<section class="partes">
-  <h2>PESO TOTAL 131 GB (COMPRIMIDO)</h2>
-  <a href="https://www.mediafire.com/file/paquzegbhzvu4cp/Mortal+Kombat+11.7z.001/file">Parte 1</a>
-<a href="https://www.mediafire.com/file/rvjdhabrsfolq1x/Mortal+Kombat+11.7z.002/file">Parte 2</a>
-<a href="https://www.mediafire.com/file/408hw9qq4kp2w8z/Mortal+Kombat+11.7z.003/file">Parte 3</a>
-<a href="https://www.mediafire.com/file/izs7cvdp1g0nhr6/Mortal_Kombat_11.7z.004/file">Parte 4</a>
-<a href="https://www.mediafire.com/file/peu57q51lm7ow0w/Mortal+Kombat+11.7z.005/file">Parte 5</a>
-<a href="https://www.mediafire.com/file/7syohe4en404dkj/Mortal+Kombat+11.7z.006/file">Parte 6</a>
-<a href="https://www.mediafire.com/file/ja5z9dbeh1ny7pc/Mortal+Kombat+11.7z.007/file">Parte 7</a>
-<a href="https://www.mediafire.com/file/s64o3jvekkl1mjr/Mortal+Kombat+11.7z.008/file">Parte 8</a>
-<a href="https://www.mediafire.com/file/9xxxog5xmwlrhp3/Mortal+Kombat+11.7z.009/file">Parte 9</a>
-<a href="https://www.mediafire.com/file/bsycftwc7jfdbpz/Mortal+Kombat+11.7z.010/file">Parte 10</a>
-<a href="https://www.mediafire.com/file/ph4vpun5i6ttjqy/Mortal+Kombat+11.7z.011/file">Parte 11</a>
-<a href="https://www.mediafire.com/file/jimyyoxby28nq5x/Mortal+Kombat+11.7z.012/file">Parte 12</a>
-<a href="https://www.mediafire.com/file/2pvxbxfngypn3ud/Mortal+Kombat+11.7z.013/file">Parte 13</a>
-<a href="https://www.mediafire.com/file/n0jxp00fp0zkiiv/Mortal+Kombat+11.7z.014/file">Parte 14</a>
-<a href="https://www.mediafire.com/file/3z65uio54acqnjp/Mortal+Kombat+11.7z.015/file">Parte 15</a>
-<a href="https://www.mediafire.com/file/s5cipjhxg6q764t/Mortal+Kombat+11.7z.016/file">Parte 16</a>
-<a href="https://www.mediafire.com/file/psp4xstlqw8lk5r/Mortal+Kombat+11.7z.017/file">Parte 17</a>
-</section>
-
-<!-- INFO -->
-<section class="info-juego">
-
-<h2 class="nota">(Extrae solo la primera parte)</h2>
-
-<h2>REQUISITOS DEL SISTEMA</h2>
-
-<ul class="requisitos">
-<li><span class="check">✔</span> <strong>Sistema operativo:</strong> windwos7/Windows 10</li>
-<li><span class="check">✔</span> <strong>Procesador:</strong> Intel Core i5-750, 2,66 GHz / AMD Phenom II X4 965, 3,4 GHz o AMD Ryzen™ 3 1200, 3,1 GHz</li>
-<li><span class="check">✔</span> <strong>Memoria:</strong> 8 GB de RAM</li>
-<li><span class="check">✔</span> <strong>Gráficos:</strong>  NVIDIA® GeForce™ GTX 670 o NVIDIA® GeForce™ GTX 1050 / AMD® Radeon™ HD 7950</li>
-<li><span class="check">✔</span> <strong>DirectX:</strong> Versión 11</li>
-<li><span class="check">✔</span> <strong>Almacenamiento:</strong>  281 GB temporales - 140 GB final</li>
-</ul>
-
-<hr>
-<h2>INFORMACIÓN DEL JUEGO</h2>
-
-<ul class="info-list">
-<li><strong>Género:</strong> Acción</li>
-<li><strong>Plataforma:</strong> PC</li>
-<li><strong>Versión:</strong> v0.384-34-CL237394</li>
-<li><strong>Edición:</strong> BUILD 8418155 + todos los complementos</li>
-</ul>
-  <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acordeón Pro</title>
-
-<style>
-body{
-  background:#0e0e0e;
-  font-family:Arial, sans-serif;
-  color:white;
-  padding:40px;
-}
-
 /* ===== ACORDEON PRO ===== */
-
 .acordeon{
   background:#111;
   border-radius:10px;
@@ -369,6 +212,8 @@ body{
   overflow:hidden;
   transition:0.3s;
   max-width:800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .acordeon.activo{
@@ -410,48 +255,158 @@ body{
   padding:0 20px;
 }
 
-.acordeon-content ul{
-  list-style:none;
-  padding:20px 0;
+.video-github{
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
 }
 
-.acordeon-content li{
-  margin-bottom:10px;
-  color:#ccc;
+/* ===== GALERÍA ===== */
+.galeria{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:15px;
+}
+
+.galeria img{
+  width:100%;
+  border-radius:10px;
+  cursor:pointer;
   transition:0.3s;
 }
 
-.acordeon-content li:hover{
-  color:white;
-  text-shadow:0 0 8px red;
+.galeria img:hover{
+  transform:scale(1.05);
+}
+
+@media(max-width:900px){
+  .hero{ flex-direction:column; }
 }
 </style>
 </head>
 
 <body>
 
-<h1>INFORMACIÓN DEL JUEGO</h1>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">MS47</div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="https://www.youtube.com/@mastersensei-47/videos" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/master__sensei47" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@mastersensei47" target="_blank">TikTok</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero">
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/K8EKDkUtxJc" allowfullscreen></iframe>
+  </div>
+  <div class="titulo">
+    <div class="video-centro">
+      <iframe src="https://www.youtube.com/embed/yc_narOXOOY" allowfullscreen></iframe>
+    </div>
+    <h1>MORTAL KOMBAT 11</h1>
+    <p>↤ más juegos ➟</p>
+  </div>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/wmozuemP_-I" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section class="partes">
+  <h2>PESO TOTAL 131 GB (COMPRIMIDO)</h2>
+  <a href="https://www.mediafire.com/file/paquzegbhzvu4cp/Mortal+Kombat+11.7z.001/file">Parte 1</a>
+  <a href="https://www.mediafire.com/file/rvjdhabrsfolq1x/Mortal+Kombat+11.7z.002/file">Parte 2</a>
+  <a href="https://www.mediafire.com/file/408hw9qq4kp2w8z/Mortal+Kombat+11.7z.003/file">Parte 3</a>
+  <a href="https://www.mediafire.com/file/izs7cvdp1g0nhr6/Mortal_Kombat_11.7z.004/file">Parte 4</a>
+  <a href="https://www.mediafire.com/file/peu57q51lm7ow0w/Mortal+Kombat+11.7z.005/file">Parte 5</a>
+  <a href="https://www.mediafire.com/file/7syohe4en404dkj/Mortal+Kombat+11.7z.006/file">Parte 6</a>
+  <a href="https://www.mediafire.com/file/ja5z9dbeh1ny7pc/Mortal+Kombat+11.7z.007/file">Parte 7</a>
+  <a href="https://www.mediafire.com/file/s64o3jvekkl1mjr/Mortal+Kombat+11.7z.008/file">Parte 8</a>
+  <a href="https://www.mediafire.com/file/9xxxog5xmwlrhp3/Mortal+Kombat+11.7z.009/file">Parte 9</a>
+  <a href="https://www.mediafire.com/file/bsycftwc7jfdbpz/Mortal+Kombat+11.7z.010/file">Parte 10</a>
+  <a href="https://www.mediafire.com/file/ph4vpun5i6ttjqy/Mortal+Kombat+11.7z.011/file">Parte 11</a>
+  <a href="https://www.mediafire.com/file/jimyyoxby28nq5x/Mortal+Kombat+11.7z.012/file">Parte 12</a>
+  <a href="https://www.mediafire.com/file/2pvxbxfngypn3ud/Mortal+Kombat+11.7z.013/file">Parte 13</a>
+  <a href="https://www.mediafire.com/file/n0jxp00fp0zkiiv/Mortal+Kombat+11.7z.014/file">Parte 14</a>
+  <a href="https://www.mediafire.com/file/3z65uio54acqnjp/Mortal+Kombat+11.7z.015/file">Parte 15</a>
+  <a href="https://www.mediafire.com/file/s5cipjhxg6q764t/Mortal+Kombat+11.7z.016/file">Parte 16</a>
+  <a href="https://www.mediafire.com/file/psp4xstlqw8lk5r/Mortal+Kombat+11.7z.017/file">Parte 17</a>
+</section>
+
+<section class="info-juego">
+
+<h2 class="nota">(Extrae solo la primera parte)</h2>
+
+<div class="acordeon">
+  <div class="acordeon-header" onclick="toggleAcordeon(this)">
+    TRAILER DEL JUEGO
+    <div class="flecha">▼</div>
+  </div>
+
+  <div class="acordeon-content">
+    <video controls class="video-github">
+      <source src="https://mastersensei47.github.io/videos/mk11-trailer.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<h2>REQUISITOS DEL SISTEMA</h2>
+
+<ul class="requisitos">
+<li><span class="check">✔</span> <strong>Sistema operativo:</strong> windwos7/Windows 10</li>
+<li><span class="check">✔</span> <strong>Procesador:</strong> Intel Core i5-750, 2,66 GHz / AMD Phenom II X4 965, 3,4 GHz o AMD Ryzen™ 3 1200, 3,1 GHz</li>
+<li><span class="check">✔</span> <strong>Memoria:</strong> 8 GB de RAM</li>
+<li><span class="check">✔</span> <strong>Gráficos:</strong> NVIDIA® GeForce™ GTX 670 o NVIDIA® GeForce™ GTX 1050 / AMD® Radeon™ HD 7950</li>
+<li><span class="check">✔</span> <strong>DirectX:</strong> Versión 11</li>
+<li><span class="check">✔</span> <strong>Almacenamiento:</strong> 281 GB temporales - 140 GB final</li>
+</ul>
+
+<hr>
+<h2>INFORMACIÓN DEL JUEGO</h2>
+
+<ul class="info-list">
+<li><strong>Género:</strong> Acción</li>
+<li><strong>Plataforma:</strong> PC</li>
+<li><strong>Versión:</strong> v0.384-34-CL237394</li>
+<li><strong>Edición:</strong> BUILD 8418155 + todos los complementos</li>
+</ul>
 
 <div class="acordeon">
   <div class="acordeon-header" onclick="toggleAcordeon(this)">
     CONTENIDO / DLCs
     <div class="flecha">▼</div>
   </div>
-
   <div class="acordeon-content">
-    <ul>
-      <li></li>
+    <ul style="list-style: none; padding: 20px 0;">
+      <li style="color: #ccc;">Mortal Kombat 11 (Juego Base)</li>
+      <li style="color: #ccc;">Kombat Pack 1 & 2</li>
+      <li style="color: #ccc;">Aftermath Expansion</li>
     </ul>
   </div>
 </div>
+
+</section>
+
+<section class="galeria">
+  <img src="imagen 1.jpeg">
+  <img src="imagen 2.jpeg">
+  <img src="imagen 3.jpeg">
+</section>
+
+</main>
 
 <script>
 function toggleAcordeon(element){
   const acordeon = element.parentElement;
   const content = element.nextElementSibling;
-
   acordeon.classList.toggle("activo");
-
   if(content.style.maxHeight){
     content.style.maxHeight = null;
   } else {
@@ -462,28 +417,3 @@ function toggleAcordeon(element){
 
 </body>
 </html>
-
-</section>
-
-<!-- GALERÍA -->
-<section class="galeria">
-  <img src="imagen 1.jpeg">
-  <img src="imagen 2.jpeg">
-  <img src="imagen 3.jpeg">
-</section>
-
-</main>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
