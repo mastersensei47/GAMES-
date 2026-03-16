@@ -69,7 +69,7 @@ main{
   margin-right:auto;
 }
 
-/* ===== HERO (BANNER) ===== */
+/* ===== HERO (BANNER AJUSTADO) ===== */
 .hero{
   position:relative;
   display:flex;
@@ -78,7 +78,7 @@ main{
   gap:20px;
   flex-wrap:wrap;
   background-image:url("fondo.jpg");
-  background-size: 100% 100%;
+  background-size: 100% 100%; /* Ajusta la imagen al cuadro sin cortarla */
   background-position: center;
   background-repeat: no-repeat;
   min-height: 450px;
@@ -217,22 +217,10 @@ main{
   background:#0f0f0f;
 }
 
-/* Botón TeraBox */
-.btn-terabox {
-  display: inline-block;
-  background: #0081ff;
-  color: white;
-  padding: 15px 30px;
+.video-drive {
+  width: 100%;
   border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 20px 0;
-  transition: 0.3s;
-}
-
-.btn-terabox:hover {
-  background: #005fbc;
-  transform: scale(1.05);
+  margin: 15px 0;
 }
 
 /* ===== REQUISITOS E INFO ===== */
@@ -319,9 +307,11 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
     TRAILER DEL JUEGO
     <div class="flecha">▼</div>
   </div>
-  <div class="acordeon-content" style="text-align: center;">
-    <p style="margin-top:20px; color:#aaa;">Haz clic abajo para ver el trailer en alta calidad</p>
-    <a href="https://1024terabox.com/s/11v612m75gCTALGmguF_jEw" target="_blank" class="btn-terabox">🚀 VER EN TERABOX</a>
+  <div class="acordeon-content" style="text-align: center; padding: 0 20px;">
+    <video controls class="video-drive">
+      <source src="https://drive.google.com/uc?export=download&id=1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
   </div>
 </div>
 
