@@ -18,7 +18,7 @@ body{
   color:white;
 }
 
-/* ===== NAVBAR RESTAURADA Y MEJORADA ===== */
+/* ===== NAVBAR ===== */
 .navbar{
   width:100%;
   background: rgba(17, 17, 17, 0.95);
@@ -91,7 +91,7 @@ main{
   margin-right:auto;
 }
 
-/* ===== HERO (LOS 3 VIDEOS Y EL BANNER) ===== */
+/* ===== HERO (LOS 3 VIDEOS) ===== */
 .hero{
   position:relative;
   display:flex;
@@ -118,7 +118,7 @@ main{
 .video-centro{ margin-bottom:15px; display:flex; justify-content:center; }
 .video-centro iframe{ width:100%; max-width:400px; height:220px; border-radius:14px; box-shadow:0 0 25px rgba(255,0,0,0.4); border:none; }
 
-/* ===== PARTES (EL DISEÑO QUE TENÍAS) ===== */
+/* ===== PARTES ===== */
 .partes{ margin-top:30px; text-align:center; }
 .partes h2{ margin-bottom:15px; }
 .partes a{
@@ -177,7 +177,8 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
   <div class="nav-container">
     <a href="index.html" class="logo">MS47</a>
     <div class="nav-links">
-      <a href="categorias.html">📂 <span>MAS JUEGOS ACA</span></a>
+      <a href="index.html">🏠 <span>Inicio</span></a>
+      <a href="categorias.html">📂 <span>Categorías</span></a>
       <a href="https://gam.onl/" target="_blank" class="btn-jugar">🕹️ <span>Jugar Online</span></a>
       <a href="https://www.youtube.com/@mastersensei-47/videos" target="_blank" class="link-youtube">🎬 <span>YouTube</span></a>
       <a href="https://www.instagram.com/master__sensei47" target="_blank" class="link-instagram">📸 <span>Instagram</span></a>
@@ -221,7 +222,7 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
 
 <section class="info-juego">
 
-<h2 class="nota" style="text-align:center; color:#bbb; border:none;">(Extrae solo la primera parte)</h2>
+<h2 style="text-align:center; color:#bbb; border:none;">(Extrae solo la primera parte)</h2>
 
 <div class="acordeon">
   <div class="acordeon-header" onclick="toggleAcordeon(this)">
@@ -245,12 +246,26 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
 <hr>
 
 <h2>INFORMACIÓN DEL JUEGO</h2>
-<ul style="list-style:none; padding:0;">
+<ul style="list-style:none; padding:0; margin-bottom: 20px;">
   <li><strong>Género:</strong> Acción</li>
   <li><strong>Plataforma:</strong> PC</li>
   <li><strong>Versión:</strong> v0.384-34-CL237394</li>
   <li><strong>Edición:</strong> Ultimate + All DLCs</li>
 </ul>
+
+<div class="acordeon">
+  <div class="acordeon-header" onclick="toggleAcordeon(this)">
+    CONTENIDO / DLCs
+    <div class="flecha">▼</div>
+  </div>
+  <div class="acordeon-content">
+    <ul style="padding: 20px; color:#ccc; list-style: none;">
+      <li>• Mortal Kombat 11 (Juego Base)</li>
+      <li>• Kombat Pack 1 & 2</li>
+      <li>• Aftermath Expansion</li>
+    </ul>
+  </div>
+</div>
 
 </section>
 
