@@ -31,12 +31,12 @@ body{
 }
 
 .nav-container{
-  max-width:1400px;
+  max-width: 100%; /* Ocupa todo el ancho */
+  padding: 12px 50px; /* Más espacio a los lados */
   margin:auto;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 20px;
 }
 
 .logo{
@@ -77,96 +77,104 @@ body{
   box-shadow: 0 0 15px #00ff00;
 }
 
-/* Redes con colores */
-.link-youtube:hover { color: #ff0000; }
-.link-instagram:hover { color: #e1306c; }
-.link-tiktok:hover { color: #00f2ea; }
-
-/* ===== CONTENIDO PRINCIPAL ===== */
+/* ===== CONTENIDO PRINCIPAL (MÁS ANCHO) ===== */
 main{
-  margin-top:70px; 
-  padding:10px 20px 40px 20px; 
-  max-width:1300px;
+  margin-top:80px; 
+  padding:20px 50px; /* Aumentamos el padding lateral */
+  max-width: 1600px; /* Antes era 1300, ahora aprovecha más la pantalla */
   margin-left:auto;
   margin-right:auto;
 }
 
 /* ===== HERO (LOS 3 VIDEOS) ===== */
 .hero{
-  position:relative;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px;
-  flex-wrap:wrap;
-  background-image:url("fondo.jpg");
-  background-size: 100% 100%;
+  flex-wrap:nowrap; /* Evita que se amontonen tan rápido */
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("fondo.jpg");
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  min-height: 450px;
-  padding: 40px 30px;
+  min-height: 500px;
+  padding: 40px;
   border-radius:12px;
+  margin-bottom: 40px;
 }
 
-.video{ flex:1; min-width:280px; }
-.video iframe{ width:100%; height:250px; border-radius:12px; box-shadow:0 0 25px black; border:none; }
+.video{ flex:1; }
+.video iframe{ width:100%; height:300px; border-radius:12px; box-shadow:0 0 25px black; border:none; }
 
-.titulo{ flex:1; text-align:center; min-width:250px; }
-.titulo h1{ font-size:28px; margin-top: 25px; margin-bottom:5px; text-shadow: 2px 2px 4px black; }
-.titulo p{ color:#eee; font-weight: bold; text-shadow: 1px 1px 3px black; }
+.titulo{ flex:1.2; text-align:center; }
+.titulo h1{ font-size:40px; margin-bottom:10px; text-shadow: 2px 2px 10px red; }
 
-.video-centro{ margin-bottom:15px; display:flex; justify-content:center; }
-.video-centro iframe{ width:100%; max-width:400px; height:220px; border-radius:14px; box-shadow:0 0 25px rgba(255,0,0,0.4); border:none; }
+.video-centro iframe{ width:100%; max-width:450px; height:250px; border-radius:14px; box-shadow:0 0 25px rgba(255,0,0,0.4); border:none; }
 
-/* ===== PARTES ===== */
-.partes{ margin-top:30px; text-align:center; }
-.partes h2{ margin-bottom:15px; }
-.partes a{
-  display:inline-block;
-  margin:6px;
-  padding:10px 18px;
-  background:#1b1b1b;
-  border-radius:6px;
-  text-decoration:none;
-  color:white;
-  transition:0.3s;
+/* ===== SECCIONES DE INFORMACIÓN (MÁS ABIERTAS) ===== */
+.info-seccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dividimos en dos columnas: Requisitos vs Info */
+  gap: 50px;
+  margin-top: 50px;
 }
-.partes a:hover{ background:#ff0000; }
 
-/* ===== INFO JUEGO Y ACORDEONES ===== */
-.info-juego{ margin: 60px auto 0 auto; max-width:900px; text-align:left; line-height:1.7; }
-.info-juego h2{ font-size:26px; margin-bottom:20px; border-bottom:2px solid #222; padding-bottom:8px; }
+.info-juego h2{ 
+  font-size:26px; 
+  margin-bottom:20px; 
+  border-left: 4px solid red; /* Cambiamos el estilo para que no sea solo una línea abajo */
+  padding-left:15px; 
+}
 
+/* ===== PARTES DE DESCARGA (ESTILO LISTA ANCHA) ===== */
+.partes-container {
+  margin: 40px 0;
+}
+
+.partes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.partes-grid a {
+  background: #1b1b1b;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.partes-grid a:hover {
+  background: red;
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+/* ===== ACORDEONES (MÁS ANCHOS) ===== */
 .acordeon{
   background:#111;
   border-radius:10px;
   margin-bottom:20px;
   border:1px solid #222;
   overflow:hidden;
-  transition:0.3s;
-  max-width:850px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%; /* Ahora ocupan todo el ancho disponible */
 }
-.acordeon.activo{ box-shadow:0 0 20px rgba(255,0,0,0.6); border:1px solid red; }
-.acordeon-header{ padding:18px; cursor:pointer; font-weight:bold; background:#1b1b1b; display:flex; justify-content:space-between; align-items:center; }
-.flecha{ transition:0.4s; }
-.acordeon.activo .flecha{ transform:rotate(180deg); color:red; }
+.acordeon-header{ padding:20px; cursor:pointer; font-weight:bold; background:#1b1b1b; display:flex; justify-content:space-between; }
 .acordeon-content{ max-height:0; overflow:hidden; transition:max-height 0.5s ease; background:#0f0f0f; }
 
-/* ===== REQUISITOS ===== */
-.requisitos{ list-style:none; padding:0; }
-.requisitos li{ margin-bottom:12px; font-size:15px; }
-.check{ color:#4caf50; margin-right:8px; font-weight:bold; }
-hr{ border:none; height:1px; background:#222; margin:40px 0; }
-
 /* ===== GALERÍA ===== */
-.galeria{ margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:15px; }
-.galeria img{ width:100%; border-radius:10px; transition:0.3s; }
+.galeria{ margin-top:50px; display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+.galeria img{ width:100%; height: 300px; object-fit: cover; border-radius:10px; border: 1px solid #333; }
 
-@media(max-width:1000px){
-  .nav-links span { display: none; }
-  .hero{ flex-direction:column; padding: 20px; background-size: cover; }
+/* RESPONSIVO */
+@media(max-width:1100px){
+  .info-seccion { grid-template-columns: 1fr; }
+  .hero { flex-direction: column; }
+  .nav-container { padding: 12px 20px; }
 }
 </style>
 </head>
@@ -180,108 +188,110 @@ hr{ border:none; height:1px; background:#222; margin:40px 0; }
       <a href="index.html">🏠 <span>Inicio</span></a>
       <a href="categorias.html">📂 <span>Categorías</span></a>
       <a href="https://gam.onl/" target="_blank" class="btn-jugar">🕹️ <span>Jugar Online</span></a>
-      <a href="https://www.youtube.com/@mastersensei-47/videos" target="_blank" class="link-youtube">🎬 <span>YouTube</span></a>
-      <a href="https://www.instagram.com/master__sensei47" target="_blank" class="link-instagram">📸 <span>Instagram</span></a>
-      <a href="https://www.tiktok.com/@mastersensei47" target="_blank" class="link-tiktok">📱 <span>TikTok</span></a>
+      <a href="https://www.youtube.com/@mastersensei-47" target="_blank">🎬 <span>YouTube</span></a>
+      <a href="https://www.instagram.com/master__sensei47" target="_blank">📸 <span>Instagram</span></a>
+      <a href="https://www.tiktok.com/@mastersensei47" target="_blank">📱 <span>TikTok</span></a>
     </div>
   </div>
 </nav>
 
 <main>
 
-<section class="hero">
-  <div class="video"><iframe src="https://www.youtube.com/embed/K8EKDkUtxJc" allowfullscreen></iframe></div>
-  <div class="titulo">
-    <div class="video-centro"><iframe src="https://www.youtube.com/embed/yc_narOXOOY" allowfullscreen></iframe></div>
-    <h1>MORTAL KOMBAT 11</h1>
-    <p>↤ más juegos ➟</p>
+  <section class="hero">
+    <div class="video"><iframe src="https://www.youtube.com/embed/K8EKDkUtxJc" allowfullscreen></iframe></div>
+    <div class="titulo">
+      <div class="video-centro"><iframe src="https://www.youtube.com/embed/yc_narOXOOY" allowfullscreen></iframe></div>
+      <h1>MORTAL KOMBAT 11</h1>
+      <p>EDICIÓN ULTIMATE - DESCARGA COMPLETA</p>
+    </div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/wmozuemP_-I" allowfullscreen></iframe></div>
+  </section>
+
+  <section class="partes-container">
+    <h2 style="margin-bottom:20px;">DESCARGAR POR PARTES (MediaFire)</h2>
+    <div class="partes-grid">
+      <a href="LINK">Parte 1</a>
+      <a href="LINK">Parte 2</a>
+      <a href="LINK">Parte 3</a>
+      <a href="LINK">Parte 4</a>
+      <a href="LINK">Parte 5</a>
+      <a href="LINK">Parte 6</a>
+      <a href="LINK">Parte 7</a>
+      <a href="LINK">Parte 8</a>
+      <a href="LINK">Parte 9</a>
+      <a href="LINK">Parte 10</a>
+      <a href="LINK">Parte 11</a>
+      <a href="LINK">Parte 12</a>
+      <a href="LINK">Parte 13</a>
+      <a href="LINK">Parte 14</a>
+      <a href="LINK">Parte 15</a>
+      <a href="LINK">Parte 16</a>
+      <a href="LINK">Parte 17</a>
+    </div>
+  </section>
+
+  <div class="info-seccion">
+    
+    <div class="columna-izquierda">
+      <div class="info-juego">
+        <h2>REQUISITOS DEL SISTEMA</h2>
+        <ul style="list-style:none; padding:20px; background:#111; border-radius:10px;">
+          <li>✅ <strong>SO:</strong> Windows 7 / 10 (64-bit)</li>
+          <li>✅ <strong>Procesador:</strong> Intel Core i5-750 / AMD Ryzen™ 3 1200</li>
+          <li>✅ <strong>RAM:</strong> 8 GB</li>
+          <li>✅ <strong>Gráficos:</strong> GTX 670 / Radeon™ HD 7950</li>
+          <li>✅ <strong>Disco:</strong> 140 GB libres</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="columna-derecha">
+      <div class="info-juego">
+        <h2>INFORMACIÓN TÉCNICA</h2>
+        <ul style="list-style:none; padding:20px; background:#111; border-radius:10px;">
+          <li><strong>Género:</strong> Lucha / Acción</li>
+          <li><strong>Versión:</strong> Ultimate (v0.384)</li>
+          <li><strong>Idioma:</strong> Español / Inglés</li>
+          <li><strong>Crack:</strong> Incluido</li>
+        </ul>
+      </div>
+      
+      <div class="acordeon" style="margin-top:20px;">
+        <div class="acordeon-header" onclick="toggleAcordeon(this)">
+          🔥 CONTENIDO / DLCs INCLUIDOS <span>▼</span>
+        </div>
+        <div class="acordeon-content">
+          <ul style="padding: 20px; color:#ccc; list-style: none;">
+            <li>• Mortal Kombat 11 (Base)</li>
+            <li>• Kombat Pack 1 & 2 (Personajes Extra)</li>
+            <li>• Aftermath Expansion (Nueva Historia)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="video"><iframe src="https://www.youtube.com/embed/wmozuemP_-I" allowfullscreen></iframe></div>
-</section>
 
-<section class="partes">
-  <h2>PESO TOTAL 131 GB (COMPRIMIDO)</h2>
-  <a href="https://www.mediafire.com/file/paquzegbhzvu4cp/Mortal+Kombat+11.7z.001/file">Parte 1</a>
-  <a href="https://www.mediafire.com/file/rvjdhabrsfolq1x/Mortal+Kombat+11.7z.002/file">Parte 2</a>
-  <a href="https://www.mediafire.com/file/408hw9qq4kp2w8z/Mortal+Kombat+11.7z.003/file">Parte 3</a>
-  <a href="https://www.mediafire.com/file/izs7cvdp1g0nhr6/Mortal_Kombat_11.7z.004/file">Parte 4</a>
-  <a href="https://www.mediafire.com/file/peu57q51lm7ow0w/Mortal+Kombat+11.7z.005/file">Parte 5</a>
-  <a href="https://www.mediafire.com/file/7syohe4en404dkj/Mortal+Kombat+11.7z.006/file">Parte 6</a>
-  <a href="https://www.mediafire.com/file/ja5z9dbeh1ny7pc/Mortal+Kombat+11.7z.007/file">Parte 7</a>
-  <a href="https://www.mediafire.com/file/s64o3jvekkl1mjr/Mortal+Kombat+11.7z.008/file">Parte 8</a>
-  <a href="https://www.mediafire.com/file/9xxxog5xmwlrhp3/Mortal+Kombat+11.7z.009/file">Parte 9</a>
-  <a href="https://www.mediafire.com/file/bsycftwc7jfdbpz/Mortal+Kombat+11.7z.010/file">Parte 10</a>
-  <a href="https://www.mediafire.com/file/ph4vpun5i6ttjqy/Mortal+Kombat+11.7z.011/file">Parte 11</a>
-  <a href="https://www.mediafire.com/file/jimyyoxby28nq5x/Mortal+Kombat+11.7z.012/file">Parte 12</a>
-  <a href="https://www.mediafire.com/file/2pvxbxfngypn3ud/Mortal+Kombat+11.7z.013/file">Parte 13</a>
-  <a href="https://www.mediafire.com/file/n0jxp00fp0zkiiv/Mortal+Kombat+11.7z.014/file">Parte 14</a>
-  <a href="https://www.mediafire.com/file/3z65uio54acqnjp/Mortal+Kombat+11.7z.015/file">Parte 15</a>
-  <a href="https://www.mediafire.com/file/s5cipjhxg6q764t/Mortal+Kombat+11.7z.016/file">Parte 16</a>
-  <a href="https://www.mediafire.com/file/psp4xstlqw8lk5r/Mortal+Kombat+11.7z.017/file">Parte 17</a>
-</section>
-
-<section class="info-juego">
-
-<h2 style="text-align:center; color:#bbb; border:none;">(Extrae solo la primera parte)</h2>
-
-<div class="acordeon">
-  <div class="acordeon-header" onclick="toggleAcordeon(this)">
-    🎞️ TRAILER DEL JUEGO
-    <div class="flecha">▼</div>
+  <div class="acordeon" style="margin-top:40px;">
+    <div class="acordeon-header" onclick="toggleAcordeon(this)">
+      🎞️ VER TRAILER CINEMÁTICO <span>▼</span>
+    </div>
+    <div class="acordeon-content" style="text-align: center; padding: 10px;">
+      <iframe src="https://drive.google.com/file/d/1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh/preview" width="100%" height="600" style="border: none;" allow="autoplay"></iframe>
+    </div>
   </div>
-  <div class="acordeon-content" style="text-align: center; padding: 10px;">
-    <iframe src="https://drive.google.com/file/d/1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh/preview" width="100%" height="450" style="border-radius: 8px; border: none;" allow="autoplay"></iframe>
-  </div>
-</div>
 
-<h2>REQUISITOS DEL SISTEMA</h2>
-<ul class="requisitos">
-  <li><span class="check">✔</span> <strong>Sistema operativo:</strong> Windows 7 / 10</li>
-  <li><span class="check">✔</span> <strong>Procesador:</strong> Intel Core i5-750 / AMD Ryzen™ 3 1200</li>
-  <li><span class="check">✔</span> <strong>Memoria:</strong> 8 GB de RAM</li>
-  <li><span class="check">✔</span> <strong>Gráficos:</strong> GTX 670 o 1050 / Radeon™ HD 7950</li>
-  <li><span class="check">✔</span> <strong>Almacenamiento:</strong> 140 GB final</li>
-</ul>
-
-<hr>
-
-<h2>INFORMACIÓN DEL JUEGO</h2>
-<ul style="list-style:none; padding:0; margin-bottom: 20px;">
-  <li><strong>Género:</strong> Acción</li>
-  <li><strong>Plataforma:</strong> PC</li>
-  <li><strong>Versión:</strong> v0.384-34-CL237394</li>
-  <li><strong>Edición:</strong> Ultimate + All DLCs</li>
-</ul>
-
-<div class="acordeon">
-  <div class="acordeon-header" onclick="toggleAcordeon(this)">
-    CONTENIDO / DLCs
-    <div class="flecha">▼</div>
-  </div>
-  <div class="acordeon-content">
-    <ul style="padding: 20px; color:#ccc; list-style: none;">
-      <li>• Mortal Kombat 11 (Juego Base)</li>
-      <li>• Kombat Pack 1 & 2</li>
-      <li>• Aftermath Expansion</li>
-    </ul>
-  </div>
-</div>
-
-</section>
-
-<section class="galeria">
-  <img src="imagen 1.jpeg">
-  <img src="imagen 2.jpeg">
-  <img src="imagen 3.jpeg">
-</section>
+  <section class="galeria">
+    <img src="imagen 1.jpeg">
+    <img src="imagen 2.jpeg">
+    <img src="imagen 3.jpeg">
+  </section>
 
 </main>
 
 <script>
 function toggleAcordeon(element){
-  const acordeon = element.parentElement;
   const content = element.nextElementSibling;
-  acordeon.classList.toggle("activo");
   if(content.style.maxHeight){
     content.style.maxHeight = null;
   } else {
