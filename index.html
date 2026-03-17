@@ -18,7 +18,7 @@ body{
   color:white;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR LIMPIA ===== */
 .navbar{
   width:100%;
   background: rgba(17, 17, 17, 0.95);
@@ -31,8 +31,8 @@ body{
 }
 
 .nav-container{
-  max-width: 100%; /* Ocupa todo el ancho */
-  padding: 12px 50px; /* Más espacio a los lados */
+  max-width: 100%;
+  padding: 12px 40px;
   margin:auto;
   display:flex;
   justify-content:space-between;
@@ -49,7 +49,7 @@ body{
 
 .nav-links{
   display:flex;
-  gap:15px;
+  gap:12px;
   align-items: center;
 }
 
@@ -61,79 +61,54 @@ body{
   transition:0.3s;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   padding: 8px 12px;
   border-radius: 8px;
 }
 
-.btn-jugar {
-  border: 1px solid #00ff00;
-  color: #00ff00 !important;
-}
+/* Botones especiales */
+.btn-mas-juegos { background: rgba(255,255,255,0.05); color: #fff !important; border: 1px solid #444; }
+.btn-mas-juegos:hover { background: #fff; color: #000 !important; }
 
-.btn-jugar:hover {
-  background: #00ff00;
-  color: black !important;
-  box-shadow: 0 0 15px #00ff00;
-}
+.btn-jugar { border: 1px solid #00ff00; color: #00ff00 !important; }
+.btn-jugar:hover { background: #00ff00; color: #000 !important; box-shadow: 0 0 15px #00ff00; }
 
-/* ===== CONTENIDO PRINCIPAL (MÁS ANCHO) ===== */
+/* ===== CONTENIDO ===== */
 main{
   margin-top:80px; 
-  padding:20px 50px; /* Aumentamos el padding lateral */
-  max-width: 1600px; /* Antes era 1300, ahora aprovecha más la pantalla */
+  padding:20px 40px; 
+  max-width: 1500px;
   margin-left:auto;
   margin-right:auto;
 }
 
-/* ===== HERO (LOS 3 VIDEOS) ===== */
+/* ===== HERO (3 VIDEOS) ===== */
 .hero{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px;
-  flex-wrap:nowrap; /* Evita que se amontonen tan rápido */
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("fondo.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("fondo.jpg");
   background-size: cover;
-  background-position: center;
-  min-height: 500px;
   padding: 40px;
-  border-radius:12px;
+  border-radius:15px;
   margin-bottom: 40px;
 }
 
 .video{ flex:1; }
-.video iframe{ width:100%; height:300px; border-radius:12px; box-shadow:0 0 25px black; border:none; }
+.video iframe{ width:100%; height:280px; border-radius:12px; border:none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
 .titulo{ flex:1.2; text-align:center; }
-.titulo h1{ font-size:40px; margin-bottom:10px; text-shadow: 2px 2px 10px red; }
+.titulo h1{ font-size:42px; text-shadow: 0 0 15px red; margin-bottom: 10px; }
 
-.video-centro iframe{ width:100%; max-width:450px; height:250px; border-radius:14px; box-shadow:0 0 25px rgba(255,0,0,0.4); border:none; }
+.video-centro iframe{ width:100%; max-width:420px; height:230px; border-radius:14px; border:none; box-shadow:0 0 25px rgba(255,0,0,0.3); }
 
-/* ===== SECCIONES DE INFORMACIÓN (MÁS ABIERTAS) ===== */
-.info-seccion {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dividimos en dos columnas: Requisitos vs Info */
-  gap: 50px;
-  margin-top: 50px;
-}
-
-.info-juego h2{ 
-  font-size:26px; 
-  margin-bottom:20px; 
-  border-left: 4px solid red; /* Cambiamos el estilo para que no sea solo una línea abajo */
-  padding-left:15px; 
-}
-
-/* ===== PARTES DE DESCARGA (ESTILO LISTA ANCHA) ===== */
-.partes-container {
-  margin: 40px 0;
-}
-
+/* ===== GRID DE DESCARGAS ===== */
 .partes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin: 30px 0;
 }
 
 .partes-grid a {
@@ -145,36 +120,44 @@ main{
   color: white;
   font-weight: bold;
   border: 1px solid #333;
-  transition: 0.3s;
+  transition: 0.2s;
+}
+.partes-grid a:hover { background: red; transform: translateY(-3px); }
+
+/* ===== SECCIÓN VIDEO ANTES QUE DLC ===== */
+.video-trailer-container {
+  margin: 40px 0;
 }
 
-.partes-grid a:hover {
-  background: red;
-  border-color: white;
-  transform: translateY(-3px);
+.info-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #222;
 }
 
-/* ===== ACORDEONES (MÁS ANCHOS) ===== */
+/* ===== ACORDEONES ===== */
 .acordeon{
   background:#111;
   border-radius:10px;
-  margin-bottom:20px;
+  margin-top: 20px;
   border:1px solid #222;
   overflow:hidden;
-  width: 100%; /* Ahora ocupan todo el ancho disponible */
 }
 .acordeon-header{ padding:20px; cursor:pointer; font-weight:bold; background:#1b1b1b; display:flex; justify-content:space-between; }
-.acordeon-content{ max-height:0; overflow:hidden; transition:max-height 0.5s ease; background:#0f0f0f; }
+.acordeon-content{ max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
 
-/* ===== GALERÍA ===== */
-.galeria{ margin-top:50px; display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
-.galeria img{ width:100%; height: 300px; object-fit: cover; border-radius:10px; border: 1px solid #333; }
+.info-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
 
-/* RESPONSIVO */
-@media(max-width:1100px){
-  .info-seccion { grid-template-columns: 1fr; }
+@media(max-width:1000px){
   .hero { flex-direction: column; }
-  .nav-container { padding: 12px 20px; }
+  .info-split { grid-template-columns: 1fr; }
+  .nav-links span { display: none; }
 }
 </style>
 </head>
@@ -185,8 +168,7 @@ main{
   <div class="nav-container">
     <a href="index.html" class="logo">MS47</a>
     <div class="nav-links">
-    
-      <a href="categorias.html">🎮<span>MAS JUEGOS ACA</span></a>
+      <a href="categorias.html" class="btn-mas-juegos">🎮 <span>Más Juegos</span></a>
       <a href="https://gam.onl/" target="_blank" class="btn-jugar">🕹️ <span>Jugar Online</span></a>
       <a href="https://www.youtube.com/@mastersensei-47" target="_blank">🎬 <span>YouTube</span></a>
       <a href="https://www.instagram.com/master__sensei47" target="_blank">📸 <span>Instagram</span></a>
@@ -202,89 +184,66 @@ main{
     <div class="titulo">
       <div class="video-centro"><iframe src="https://www.youtube.com/embed/yc_narOXOOY" allowfullscreen></iframe></div>
       <h1>MORTAL KOMBAT 11</h1>
-      <p>EDICIÓN ULTIMATE - DESCARGA COMPLETA</p>
+      <p>EDICIÓN ULTIMATE</p>
     </div>
     <div class="video"><iframe src="https://www.youtube.com/embed/wmozuemP_-I" allowfullscreen></iframe></div>
   </section>
 
-  <section class="partes-container">
-    <h2 style="margin-bottom:20px;">DESCARGAR POR PARTES (MediaFire)</h2>
+  <section>
+    <h2 style="text-align: center; margin-bottom: 20px;">DESCARGAR (131 GB COMPRIMIDO)</h2>
     <div class="partes-grid">
-      <a href="LINK">Parte 1</a>
-      <a href="LINK">Parte 2</a>
-      <a href="LINK">Parte 3</a>
-      <a href="LINK">Parte 4</a>
-      <a href="LINK">Parte 5</a>
-      <a href="LINK">Parte 6</a>
-      <a href="LINK">Parte 7</a>
-      <a href="LINK">Parte 8</a>
-      <a href="LINK">Parte 9</a>
-      <a href="LINK">Parte 10</a>
-      <a href="LINK">Parte 11</a>
-      <a href="LINK">Parte 12</a>
-      <a href="LINK">Parte 13</a>
-      <a href="LINK">Parte 14</a>
-      <a href="LINK">Parte 15</a>
-      <a href="LINK">Parte 16</a>
-      <a href="LINK">Parte 17</a>
+      <a href="#">Parte 1</a> <a href="#">Parte 2</a> <a href="#">Parte 3</a> <a href="#">Parte 4</a>
+      <a href="#">Parte 5</a> <a href="#">Parte 6</a> <a href="#">Parte 7</a> <a href="#">Parte 8</a>
+      <a href="#">Parte 9</a> <a href="#">Parte 10</a> <a href="#">Parte 11</a> <a href="#">Parte 12</a>
+      <a href="#">Parte 13</a> <a href="#">Parte 14</a> <a href="#">Parte 15</a> <a href="#">Parte 16</a>
+      <a href="#">Parte 17</a>
     </div>
   </section>
 
-  <div class="info-seccion">
-    
-    <div class="columna-izquierda">
-      <div class="info-juego">
-        <h2>REQUISITOS DEL SISTEMA</h2>
-        <ul style="list-style:none; padding:20px; background:#111; border-radius:10px;">
-          <li>✅ <strong>SO:</strong> Windows 7 / 10 (64-bit)</li>
-          <li>✅ <strong>Procesador:</strong> Intel Core i5-750 / AMD Ryzen™ 3 1200</li>
-          <li>✅ <strong>RAM:</strong> 8 GB</li>
-          <li>✅ <strong>Gráficos:</strong> GTX 670 / Radeon™ HD 7950</li>
-          <li>✅ <strong>Disco:</strong> 140 GB libres</li>
-        </ul>
-      </div>
+  <section class="video-trailer-container">
+    <h2 style="margin-bottom: 15px; border-left: 4px solid red; padding-left: 15px;">🎞️ TRAILER DEL JUEGO</h2>
+    <div class="info-box" style="padding: 10px;">
+      <iframe src="https://drive.google.com/file/d/1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh/preview" width="100%" height="550" style="border: none; border-radius: 8px;" allow="autoplay"></iframe>
+    </div>
+  </section>
+
+  <div class="info-split">
+    <div class="info-box">
+      <h2 style="margin-bottom: 15px;">REQUISITOS PC</h2>
+      <ul style="list-style: none; line-height: 2;">
+        <li>✅ <strong>Windows 10 (64-bit)</strong></li>
+        <li>✅ <strong>Intel Core i5-750 / Ryzen 3 1200</strong></li>
+        <li>✅ <strong>8 GB RAM</strong></li>
+        <li>✅ <strong>GTX 670 / Radeon HD 7950</strong></li>
+      </ul>
     </div>
 
-    <div class="columna-derecha">
-      <div class="info-juego">
-        <h2>INFORMACIÓN TÉCNICA</h2>
-        <ul style="list-style:none; padding:20px; background:#111; border-radius:10px;">
-          <li><strong>Género:</strong> Lucha / Acción</li>
-          <li><strong>Versión:</strong> Ultimate (v0.384)</li>
-          <li><strong>Idioma:</strong> Español / Inglés</li>
-          <li><strong>Crack:</strong> Incluido</li>
-        </ul>
+    <div>
+      <div class="info-box">
+        <p><strong>Género:</strong> Acción / Lucha</p>
+        <p><strong>Versión:</strong> Ultimate Edition</p>
+        <p><strong>Crack:</strong> Incluido (EMPRESS/DODDI)</p>
       </div>
-      
-      <div class="acordeon" style="margin-top:20px;">
+
+      <div class="acordeon">
         <div class="acordeon-header" onclick="toggleAcordeon(this)">
           🔥 CONTENIDO / DLCs INCLUIDOS <span>▼</span>
         </div>
         <div class="acordeon-content">
           <ul style="padding: 20px; color:#ccc; list-style: none;">
-            <li>• Mortal Kombat 11 (Base)</li>
-            <li>• Kombat Pack 1 & 2 (Personajes Extra)</li>
-            <li>• Aftermath Expansion (Nueva Historia)</li>
+            <li>• Mortal Kombat 11 (Juego Base)</li>
+            <li>• Kombat Pack 1 & 2</li>
+            <li>• Aftermath Expansion</li>
           </ul>
         </div>
       </div>
     </div>
-
   </div>
 
-  <div class="acordeon" style="margin-top:40px;">
-    <div class="acordeon-header" onclick="toggleAcordeon(this)">
-      🎞️ VER TRAILER CINEMÁTICO <span>▼</span>
-    </div>
-    <div class="acordeon-content" style="text-align: center; padding: 10px;">
-      <iframe src="https://drive.google.com/file/d/1lZOMbApA9CKg6EH1HDt_ucptBm9jwjqh/preview" width="100%" height="600" style="border: none;" allow="autoplay"></iframe>
-    </div>
-  </div>
-
-  <section class="galeria">
-    <img src="imagen 1.jpeg">
-    <img src="imagen 2.jpeg">
-    <img src="imagen 3.jpeg">
+  <section style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+    <img src="imagen 1.jpeg" style="width: 100%; border-radius: 10px;">
+    <img src="imagen 2.jpeg" style="width: 100%; border-radius: 10px;">
+    <img src="imagen 3.jpeg" style="width: 100%; border-radius: 10px;">
   </section>
 
 </main>
@@ -292,11 +251,7 @@ main{
 <script>
 function toggleAcordeon(element){
   const content = element.nextElementSibling;
-  if(content.style.maxHeight){
-    content.style.maxHeight = null;
-  } else {
-    content.style.maxHeight = content.scrollHeight + "px";
-  }
+  content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
 }
 </script>
 
